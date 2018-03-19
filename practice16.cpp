@@ -8,11 +8,12 @@ using namespace std;
 
 bool g_InvalidInput = false;
 
+bool equal(double num1, double num2);
 double PowerWithUnsignedExponent(double base,unsigned int absExponent);
 double Power(double base, int exponent)
 {
 	g_InvalidInput = false;
-	if (base == 0.0 && exponent < 0)
+	if (equal(base,0.0) && exponent < 0)
 	{
 		//底为0，指数为负，0的倒数没有意义出错
 		g_InvalidInput = true;
